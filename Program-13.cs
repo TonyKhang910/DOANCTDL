@@ -76,7 +76,7 @@ namespace csdl
             Graph thegraph = new Graph();
         batdau:
             Console.WriteLine();
-            Console.Write("> Vui lòng chọn yêu cầu của bạn ? ");
+            Console.Write("> Vui lòng chọn yêu cầu của bạn:  ");
             int key = int.Parse(Console.ReadLine());
             switch (key)
             {
@@ -104,10 +104,13 @@ namespace csdl
                     goto batdau;
                 case 2:
                     {
+                        Console.WriteLine("*************");
+                        Console.WriteLine(" >>> Với:");
                         foreach (string val in a)
                         {
                             Console.WriteLine(val);
                         }
+                        Console.WriteLine(" >>> Ta có:");
                         Console.Write("Vận chuyển từ nhà kho: ");
                         int khodi = int.Parse(Console.ReadLine());
                         while (khodi > n1)
@@ -126,8 +129,8 @@ namespace csdl
                     }
                     goto batdau;
                 default:
-                    Console.WriteLine("nhập không hợp lệ !!");
-                    Console.Write("nhấn 1 để quay lại menu lựa chọn \nnhấn số bất kỳ để thoát chương trình \n >> ");
+                    Console.WriteLine("Nhập không hợp lệ !!");
+                    Console.Write("Nhấn 1 để quay lại menu lựa chọn \nnhấn số bất kỳ để thoát chương trình \n >> ");
                     int error = int.Parse(Console.ReadLine());
                     if (error == 1) goto batdau;
                     else break;
